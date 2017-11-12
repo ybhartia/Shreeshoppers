@@ -1,0 +1,75 @@
+<ion-view title="Brand" id="page7" style="background-color:#FFFFFF;">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-ios-search"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <h1 id="brand3-heading6" style="color:#000000;">FCUK</h1>
+    <ion-list id="brand3-list8" class="manual-list-fullwidth">
+      <ion-item class="item-icon-right dark" id="brand3-list-item34">Accessories
+        <i class="icon ion-android-arrow-dropdown icon-accessory"></i>
+      </ion-item>
+      <div class="item item-body" id="brand3-list-item-container4">
+        <div id="brand3-markdown12" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">ACC2445</p>
+        </div>
+        <div id="brand3-markdown16" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">ACC2446</p>
+        </div>
+        <div id="brand3-markdown17" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">ACC2447</p>
+        </div>
+        <div id="brand3-markdown18" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">ACC2448</p>
+        </div>
+      </div>
+      <ion-item id="brand3-list-item35">Men T-Shirts</ion-item>
+      <ion-item id="brand3-list-item36">Men - Jeans</ion-item>
+      <ion-item id="brand3-list-item37">Men - Undergarments</ion-item>
+      <ion-item id="brand3-list-item38">Atta</ion-item>
+    </ion-list>
+
+
+    <div>
+    <ul>
+        <li class="created">
+            <b>CREATED</b>
+        </li>
+        <li class="ip">
+            <b>IP ADDRESS</b>
+        </li>
+    </ul>
+    <ul ng-repeat="vote in votes" ng-click="expand()">
+
+        <li class="created">
+            {{vote.created|date}}
+        </li>
+        <li class="ip">
+            {{vote.ip}}
+        </li>
+
+
+        <ul ng-show="show" ng-repeat="file in vote.folder">
+          <li class="created">
+              {{file.created|date}}
+          </li>
+          <li class="ip">
+              {{file.ip}}
+          </li>
+        </ul>
+        <ul class="file" ng-repeat="file in vote.file">
+            <li class="created">
+                {{file.created|date}}
+            </li>
+            <li class="ip">
+               {{file.ip}}
+            </li>
+        </ul>
+
+    </ul>
+
+   </div>
+
+
+
+  </ion-content>
+</ion-view>

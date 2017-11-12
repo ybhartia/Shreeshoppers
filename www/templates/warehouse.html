@@ -1,0 +1,73 @@
+<ion-view title="Warehouse" id="page1" style="background-color:#FFFFFF;">
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-icon icon ion-ios-search"></button>
+  </ion-nav-buttons>
+
+  <ion-content padding="true" class="has-header">
+    <h1 id="warehouse-heading1" style="color:#000000;">Brands</h1>
+
+    <div ng-init="brands = [{name:'FCUK', brand:'brand3'},
+                         {name:'Patanjali', brand:'brand2'},
+                         {name:'Jockey', brand:'brand'},
+                         {name:'Nike', brand:'brand'},
+                         {name:'FCUK', brand:'brand'},
+                         {name:'Adidas', brand:'brand'}]"></div>
+
+
+    <label class="item item-input myclass1" id="warehouse-search2" name="Search Brands">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="search" ng-model="searchText" placeholder="" >
+    </label>
+
+
+    <ion-list id="warehouse-list1" class="list" ng-repeat=" x in brands | filter:searchText" ui-sref='{{x.brand}}()'>
+
+      <ion-item class="item-icon-right" >
+
+        <div style="float:left" class="item-text-wrap" >
+              {{x.name}}
+              <i class="icon ion-ios-arrow-right"></i>
+              <ion-option-button class="button-dark"></ion-option-button>
+         </div>
+
+       </ion-item>
+
+     </ion-list>
+<!--
+      <ion-item class="item-icon-right" id="warehouse-list-item4" ui-sref="brand3()">FCUK
+        <i class="icon ion-ios-arrow-right"></i>
+        <ion-option-button class="button-dark"></ion-option-button>
+      </ion-item>
+      <ion-item class="item-icon-right" id="warehouse-list-item13" ui-sref="brand2()">Patanjali
+        <i class="icon ion-ios-arrow-right"></i>
+        <ion-option-button class="button-dark"></ion-option-button>
+      </ion-item>
+      <ion-item class="item-icon-right" id="warehouse-list-item14" ui-sref="brand()">Jockey
+        <i class="icon ion-ios-arrow-right"></i>
+        <ion-option-button class="button-dark"></ion-option-button>
+      </ion-item>
+      <ion-item class="item-icon-right" id="warehouse-list-item15">Nike
+        <i class="icon ion-ios-arrow-right"></i>
+        <ion-option-button class="button-dark"></ion-option-button>
+      </ion-item>
+      <ion-item class="item-icon-right" id="warehouse-list-item16">FCUK
+        <i class="icon ion-ios-arrow-right"></i>
+        <ion-option-button class="button-dark"></ion-option-button>
+      </ion-item>
+      <ion-item class="item-icon-right" id="warehouse-list-item17">FCUK
+        <i class="icon ion-ios-arrow-right"></i>
+        <ion-option-button class="button-dark"></ion-option-button>
+      </ion-item>
+      <ion-item class="item-icon-right" id="warehouse-list-item18">FCUK
+        <i class="icon ion-ios-arrow-right"></i>
+        <ion-option-button class="button-dark"></ion-option-button>
+      </ion-item>
+      <ion-item class="item-icon-right" id="warehouse-list-item19">FCUK
+        <i class="icon ion-ios-arrow-right"></i>
+        <ion-option-button class="button-dark"></ion-option-button>
+      </ion-item>
+
+-->
+
+  </ion-content>
+</ion-view>
